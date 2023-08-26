@@ -1,0 +1,39 @@
+#pragma once
+#include <SDL.h>
+#include<SDL_image.h>
+#include <SDL_ttf.h>
+#include <iostream>
+#include "MainMenu.h"
+
+class TwoPlayerIntro {
+	private:
+		SDL_Texture* message_texture, * message_box_texture, * done_texture;
+		SDL_Surface* message_surface, * message_box_surface, * done_surface;
+		bool done_button_state = true;
+		int offsetX = 150;
+		int offsetY = 50;
+		bool typing = true;
+
+	public:
+
+		std::string textInputOne = "";
+		std::string textInputTwo = "";
+
+		SDL_Rect r21{ 260 + offsetX, 170 + offsetY, 400, 100 }, r22{ 300 + offsetX, 350 + offsetY, 300, 50 };
+		SDL_Rect r23{ 350 + offsetX, 550 + offsetY, 200, BUT_HEIGHT };
+
+		void render_message();
+
+		void render_message_box();
+
+		void render_done_button();
+
+		void reset_button_states();
+
+		void render_intro_all();
+
+		void handleTwoPlayerIntroEvents(SDL_Event e);
+
+};
+
+

@@ -83,7 +83,7 @@ void PlayerIntro::handlePlayerIntroEvents(SDL_Event e) {
 				
 				ClickSound->PauseBackgroundMusic();
 				SDL_Delay(2000);
-				const char* command = "start cmd /k \"D: && cd \"D:/Carrom_Board_Final/dependencies\" && main\"";
+				const char* command = "start cmd /k \"cd \"../dependencies\" && main\"";
 				int returnValue = system(command);
 
 

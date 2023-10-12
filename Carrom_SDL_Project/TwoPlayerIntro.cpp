@@ -96,7 +96,7 @@ void TwoPlayerIntro::handleTwoPlayerIntroEvents(SDL_Event e) {
 
 				ClickSound->PauseBackgroundMusic();
 				SDL_Delay(2000);
-				const char* command = "start cmd /k \"D: && cd \"D:/Carrom_Board_Final/dependencies\" && finale\"";
+				const char* command = "start cmd /k \"cd \"../dependencies\" && finale\"";
 				int returnValue = system(command);
 
 			}
